@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="unselectable">
+     
+   
+    <div class="shape"></div>
+    <div id="intro">.Your Subjects</div>
+    <div class="topFrame"></div>
+    <div class="btmFrame"></div>
+    <img class="dev" src="Designer_00000.png" alt="">
+
+   <main id="main">
+    <!-- <div class="settings">
+
+        <div><h4>Music</h4> <h5 id="mt">T</h5>  <h5 onclick="pauses()" id="mf">F</h5></div>
+        <div><h4>sound</h4>   <h5>T</h5>  <h5>F</h5></div>
+        <div><h4>Voice</h4> <h5>T</h5>  <h5>F</h5></div>
+
+        
+
+    </div> -->
+
+     <img class="haze" src="Blue_Haze.0jpg" alt="" srcset="">
+    <div id="particles-js"></div>
+    <!-- <img class="haze" src="Blue_Haze.jpg" alt="" srcset=""> -->
+    <h1>     <img class="nub" src="nub_00000.png" alt="" srcset="">
+        Let's study</h1>
+    <p>This website designed for 2nd CS students to make acces to materials easy</p>
+    <button onclick="anim()" id="btn">  <img src="arrow_00000_00000.png" class="arrow" alt="" srcset="">
+        start
+    </button>
+    <!-- <button id="set" onclick="set()"><img class="set" src="set.png" alt=""></button> -->
+   </main>
+   <section class="subject" id="subject">
+    <img class="back" src="back_00000.png" alt="" srcset="">
+       <h1 class="select"> <img src="select2.png" style="width: 40px;" alt="" srcset="" class="anim">  Select your subject</h1>
+       <div class="subjectContents">
+         <h2 class="sub1" onclick="inDataStruture()">Data Structure</h2>
+         <h2 class="sub2" onclick="inPython()">Python</h2>
+         <h2 class="sub3" onclick="inMath()"  >Math3</h2>
+         <h2 class="sub4" onclick="inOS()" >Operating</h2>
+         <h2 class="sub5" onclick="inARC()" >Architecture</h2>
+
+         <button onclick="out()" id="btn">  <img id="back" src="arrow_00000_00000.png" class="arrow" alt="" srcset="">
+            Home
+        </button>
+
+       </div>
+   </section>
+
+    <!-- Data structure  -->
+
+   <section class="dataStructure">
+    <div class="DataContents">
+        <h1 class="select">  Select the language</h1>
+
+        <h2  class="sub1En">English courses </h2>
+        <h2 onclick="inSub1Ar()" class="sub1Ar">Arabic courses</h2>
+
+    <button class="back2" onclick="outDataStruture()">back<img id="back" src="arrow_00000_00000.png" class="arrow2" alt="" srcset=""> </button>
+    </div>
+    <div class="DataContentsMaterial">
+
+        <h1 class="select">  Select the instructor</h1>
+        <a onclick="sound()" href="https://youtube.com/playlist?list=PLCInYL3l2AajqOUW_2SwjWeMwf4vL4RSp&si=-QHhObDPwCYHTnoA" target="_blank"><h3   class="sub1ins1">Adel Nasem <img class="adel" src="adel.jpg" alt="" srcset=""> </h3></a>
+        
+        <a onclick="sound()" href="https://youtube.com/playlist?list=PL1DUmTEdeA6JlommmGP5wicYLxX5PVCQt&si=BHiqg8_HBZ6Q7kj1" target="_blank"><h3  class="sub1ins2">El-desoqy <img class="adel" src="eldsoqy.jpg" alt="" srcset=""> </h3></a>
+
+
+    <button class="back3" onclick="outSub1Ar()">back<img id="back" src="arrow_00000_00000.png" class="arrow2" alt="" srcset=""> </button>
+    </div>
+   </section>
+
+
+
+   <!-- python  -->
+
+   <section class="python">
+    <div class="PythonContents">
+        <h1 class="select">  Select the language</h1>
+
+        <h2  class="sub2En">English courses </h2>
+
+        <h2 onclick="inSub2Ar()" class="sub2Ar">Arabic courses</h2>
+
+    <button class="back4" onclick="outPython()">back<img id="back" src="arrow_00000_00000.png" class="arrow2" alt="" srcset=""> </button>
+    </div>
+
+
+    <div class="PyContentsMaterial">
+
+        <h1 class="select">  Select the instructor</h1>
+        <a onclick="sound()" href="https://youtube.com/playlist?list=PLuXY3ddo_8nzrO74UeZQVZOb5-wIS6krJ&si=gCUOykgHeA6KOlUE" target="_blank"><h3   class="sub2ins1">CodeZella <img class="adel" src="islam.png" alt="" srcset=""> </h3></a>
+        
+       <a  onclick="sound()" href="https://youtube.com/playlist?list=PLDoPjvoNmBAyE_gei5d18qkfIe-Z8mocs&si=b0tSKkybqUwoywoF" target="_blank" ><h3  class="sub2ins2">El-Zero <img class="adel" src="zero.png" alt="" srcset=""> </h3></a> 
+
+
+    <button class="back5" onclick="outSub2Ar()">back<img id="back" src="arrow_00000_00000.png" class="arrow2" alt="" srcset=""> </button>
+
+    </div>
+   </section>
+
+
+
+   
+   <!-- Math  -->
+
+   <section class="math">
+    <div class="MathContents">
+        <h1 class="select">  Select the language</h1>
+
+        <h2  class="sub3En">English courses </h2>
+
+        <h2 onclick="inSub3Ar()" class="sub3Ar">Arabic courses</h2>
+
+    <button class="back6" onclick="outMath()">back<img id="back" src="arrow_00000_00000.png" class="arrow2" alt="" srcset=""> </button>
+    </div>
+
+
+    <div class="MathContentsMaterial">
+
+        <h1 class="select">  Select the instructor</h1>
+        <a onclick="sound()" ><h3   class="sub3ins1">????? <img class="adel" src="" alt="" srcset=""> </h3></a>
+        
+        <h3 onclick="sound()"  class="sub3ins2">????? <img class="adel" src="" alt="" srcset=""> </h3>
+        <h3>Sorry! The developer has not added it yet.</h3>
+
+
+    <button class="back7" onclick="outSub3Ar()">back<img id="back" src="arrow_00000_00000.png" class="arrow2" alt="" srcset=""> </button>
+
+    </div>
+   </section>
+
+   
+   <!-- OS  -->
+
+   <section class="os">
+    <div class="OSContents">
+        <h1 class="select">  Select the language</h1>
+
+        <h2  class="sub4En">English courses </h2>
+
+        <h2 onclick="inSub4Ar()" class="sub4Ar">Arabic courses</h2>
+
+    <button class="back8" onclick="outOS()">back<img id="back" src="arrow_00000_00000.png" class="arrow2" alt="" srcset=""> </button>
+    </div>
+
+
+    <div class="OSContentsMaterial">
+
+        <h1 class="select">  Select the instructor</h1>
+        <a onclick="sound()" href="https://youtube.com/playlist?list=PLxIvc-MGOs6ib0oK1z9C46DeKd9rRcSMY&si=1xj5sioMv0Qie45f" target="_blank"><h3   class="sub4ins1">Dr/Ahmed Hagag<img class="adel" src="hagag.png" alt="" srcset=""> </h3></a>
+        
+        <a onclick="sound()" href="https://youtube.com/playlist?list=PLKlTaCM87WvrO0RElCsK30uS-ylzRLgFM&si=TOYGv7pDfx5fYMP_" target="_blank"><h3   class="sub4ins2">Dr/Hassan El-Nasry<img class="adel" src="nasry.png" alt="" srcset=""> </h3></a>
+
+
+    <button class="back9" onclick="outSub4Ar()">back<img id="back" src="arrow_00000_00000.png" class="arrow2" alt="" srcset=""> </button>
+
+    </div>
+   </section>
+
+   
+   <!-- Architecture  -->
+
+   <section class="arc">
+    <div class="ARCContents">
+        <h1 class="select">  Select the language</h1>
+
+        <h2  class="sub5En">English courses </h2>
+
+        <h2 onclick="inSub5Ar()" class="sub5Ar">Arabic courses</h2>
+
+    <button class="back9" onclick="outARC()">back<img id="back" src="arrow_00000_00000.png" class="arrow2" alt="" srcset=""> </button>
+    </div>
+
+
+    <div class="ARCContentsMaterial">
+
+        <h1 class="select">  Select the instructor</h1>
+        <a onclick="sound()" href="https://youtube.com/playlist?list=PLGqb1w5WKZITfAcpt_q8oUYb1yHtFEgeU&si=QS5I7fvocqR6ZaPE" target="_blank"><h3   class="sub5ins1">Ghassan Bati <img class="adel" src="ghassan.png" alt="" srcset=""> </h3></a>
+        
+        <!-- <a onclick="sound()" href="https://youtube.com/playlist?list=PLGqb1w5WKZITfAcpt_q8oUYb1yHtFEgeU&si=QS5I7fvocqR6ZaPE" target="_blank"><h3   class="sub5ins2">Ghassan Bati <img class="adel" src="adel.jpg" alt="" srcset=""> </h3></a> -->
+
+
+    <button class="back10" onclick="outSub5Ar()">back<img id="back" src="arrow_00000_00000.png" class="arrow2" alt="" srcset=""> </button>
+
+    </div>
+   </section>
+
+
+
+
+   
+   <!-- <audio id="musics"  src="music.mp3"  autoplay></audio> -->
+   <script src="butter.js"></script>
+   <script>
+    butter.init({cancelOnTouch: true});
+  </script>
+   <script src="script.js"></script>
+   <script  src="particles.js"></script>
+
+   <script  src="app.js"></script>
+  
+
+</body>
+</html>

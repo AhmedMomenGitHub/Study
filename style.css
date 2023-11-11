@@ -1,0 +1,857 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI regular';
+    color: white;
+    font-family: zekton;
+
+}
+
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+}
+body{
+    background-color: rgb(9, 9, 9);
+    overflow: scroll;
+    overflow: hidden;
+    height: 200vh;
+
+}
+h1{
+    font-size: 70px;
+    font-family: 'Segoe UI regular';
+    /* background: linear-gradient(120.55deg,#beccff 18.56%,#0077ff 98.01%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; */
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    
+
+}
+button{
+    margin-top: 20px;
+    font-size: 40px;
+    padding-inline: 20px;
+    /* border-radius: 10px; */
+    padding-bottom: 0px;
+    /* background: linear-gradient(92.99deg,#0148BA 1.35%,#01A5FF 104.47%); */
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    /* box-shadow: 0px 0px 10px #0062ff; */
+    border-radius: 10px;
+    background:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    transition: 0.3s;
+    animation: glow 3s  infinite;
+    opacity: 30%;
+}
+
+@keyframes glow{
+    0%{opacity: 30%;}
+    50%{opacity: 100%;}
+}
+
+p{
+    color: white;
+    font-family:  'Segoe UI regular';
+    font-size: 20px;
+    width: 30rem;
+    text-align: center;
+
+}
+.arrow{
+    width: 30px;
+    transition: 0.3s;
+}
+.nub{
+    width: 90px;
+}
+.haze{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    filter: grayscale(0);
+    rotate: 180deg;
+    opacity: 20%;
+    
+}
+
+button:hover .arrow{
+    rotate: -90deg;
+}
+
+.shape{
+    height: 100vh;
+    color: white;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 400;
+    font-size: 80px;
+    /* background: linear-gradient(to top ,#0148BA 1.35%,#01A5FF 104.47%) ; */
+    top: 0rem;
+    transition: .3s ease-in-out;
+    background: #ffffff;
+    display: none;
+    
+
+
+}
+
+.shape::after{
+    content: '';
+    height: 150vh;
+    width: 250vh;
+    position: absolute;
+    border-radius: 50%;
+    /* background: linear-gradient(to top ,#0148BA 1.35%,#01A5FF 104.47%) ; */
+    z-index: 500;
+    translate: 0 -30rem;
+    background: #ffffff;
+  
+  
+  
+  
+  }
+  
+  .shape::before{
+    content: '';
+    height: 150vh;
+    width: 250vh;
+    position: absolute;
+    border-radius: 50%;
+    /* background: linear-gradient(to top ,#0148BA 1.35%,#01A5FF 104.47%) ; */
+    z-index: 500;
+    translate: 0 30rem;
+    background: #ffffff;
+    rotate: 180deg;
+  
+  
+  
+  }
+
+
+@keyframes top{
+    from{top: 100rem;
+    }
+}
+@keyframes out{
+    to{top:-250rem;
+    }
+  }
+
+    
+
+
+    #intro{
+        height: 100vh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 600;
+        color: rgb(0, 0, 0);
+        gap: 30px;
+        font-size: 80px;
+        font-weight: 2000px;
+        width: 100%;
+        
+    }
+
+    @keyframes appear{
+        from{opacity: 0;
+
+            transform: translateY(10rem);
+            scale: 1;
+        }
+    }
+
+    @keyframes disappear{
+        to{
+           opacity: 0;
+           transform: translateY(-50rem);
+           scale: 1;
+
+
+        }
+    }
+    button:hover{
+        transform: translateY(-5px);
+    }
+
+
+    .subject{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 60px;
+        animation:  target 2s cubic-bezier(0,1,.05,1);
+
+        
+
+    }
+    .back{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        filter: blur(10px);
+        opacity: 40%;
+                animation:  bg 10s;
+
+    }
+    @keyframes bg{
+        from{    scale: 2;
+            opacity: 0;
+        }
+    }
+    
+    @keyframes target{
+        from{    transform: translateY(40rem);
+            opacity: 0;
+        }
+    }
+    .subjectContents{
+        gap: 40px;
+        display: flex; 
+        flex-direction: column;
+        position: relative;
+        
+    }
+
+    .select{
+        padding-bottom: 10px;
+        font-size: 50px;
+    }
+    #back{
+        transform: rotate(0deg);
+    }
+    .anim{
+        width: 100px;
+    }
+    h2{
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.3s;
+    
+    }
+    h2:hover{
+        scale: 1.2;
+    }
+    h2::before{
+         content: '';
+         width: 100%;
+         position: absolute;
+         transform: translateX(-20px);
+         opacity: 0;
+         border-top: 1px solid ;
+
+         border-bottom: 1px solid ;
+         border-radius: 5px;
+         width: 0%;
+         transition: 0.3s;
+    }
+    h2:hover::before{
+        content: '> ';
+        width: 100%;
+        
+        position: absolute;
+        transform: translateX(-20px);
+        opacity: 1;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.144);
+
+        /* padding-bottom: 10px; */
+    
+   }
+
+   #particles-js{
+    height: 105vh;
+    width: 100%;
+    position: absolute;
+    
+   }
+   
+   @keyframes glitch{
+    0%{
+      transform: skew(0,0);
+      filter:  blur(10px) saturate(5) contrast(5) sepia(2);
+      opacity: 1;
+    }
+    20%{
+      transform: skey(20deg,0);
+      opacity: 0.7;
+    }
+    40%{
+      transform:skew(-20deg,0);
+      opacity: 0.4;
+    }
+    60%{
+      transform:skew(20,0deg);
+      opacity: 0.7;
+    }
+    80%{
+      transform:skew(-20,0deg);
+      opacity: 0.7;
+    }
+    100%{
+      transform:skew(0,0);
+      opacity: 1;
+    }
+
+    
+  }
+  .dev{
+    position: absolute;
+    width: 100px;
+    bottom: 5%;
+    left: 5%;
+    z-index: 900;
+  }
+  .topFrame{
+    position: absolute;
+    height: 10vh;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 800;
+
+  }
+  .btmFrame{
+    position: absolute;
+    height: 10vh;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 800;
+  }
+  @keyframes opened{
+    to{opacity: 0%;
+        /* scale: 0.9; */
+    }
+  }
+
+
+
+
+
+  .dataStructure{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation: closed .5s ease;
+  }
+  @keyframes closed{
+    from{opacity: 0%;
+    }
+    to{opacity: 100%;}
+}
+.unselectable {
+    -webkit-user-select: none; /* Safari */
+    user-select: none;
+  }
+
+
+.DataContents{
+    gap: 40px;
+    display: flex; 
+    flex-direction: column;
+}
+.arrow2{
+    width: 35px;
+    rotate: 180deg;
+}
+.back2, .back3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.DataContentsMaterial{
+   display: none;
+   flex-direction: column;
+   align-items: center;
+   gap: 50px;
+    justify-content: center;
+
+}
+.DataContentsMaterial .adel{
+    width: 140px;
+    border-radius: 50%;
+    
+}
+.sub1ins1,.sub1ins2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     justify-content: center;
+     flex-direction: column-reverse;
+     gap: 20px;
+}
+h3{
+    transition: 0.3s;
+}
+h3:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+
+
+/* python */
+
+
+.python{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation: closed .5s ease;
+  }
+  @keyframes closed{
+    from{opacity: 0%;
+    }
+    to{opacity: 100%;}
+}
+
+
+.PythonContents{
+    gap: 40px;
+    display: flex; 
+    flex-direction: column;
+}
+.arrow2{
+    width: 35px;
+    rotate: 180deg;
+}
+.back4, .back5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.PyContentsMaterial{
+   display: none;
+   flex-direction: column;
+   align-items: center;
+   gap: 50px;
+    justify-content: center;
+
+}
+.PyContentsMaterial .adel{
+    width: 140px;
+    border-radius: 50%;
+    
+}
+.sub2ins1,.sub2ins2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     justify-content: center;
+     flex-direction: column-reverse;
+     gap: 20px;
+}
+h3{
+    transition: 0.3s;
+}
+h3:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+
+
+
+
+/* Math */
+
+
+.math{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation: closed .5s ease;
+  }
+  @keyframes closed{
+    from{opacity: 0%;
+    }
+    to{opacity: 100%;}
+}
+
+
+.MathContents{
+    gap: 40px;
+    display: flex; 
+    flex-direction: column;
+}
+.arrow2{
+    width: 35px;
+    rotate: 180deg;
+}
+.back6, .back7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.MathContentsMaterial{
+   display: none;
+   flex-direction: column;
+   align-items: center;
+   gap: 50px;
+    justify-content: center;
+
+}
+.MathContentsMaterial .adel{
+    width: 140px;
+    border-radius: 50%;
+    
+}
+.sub3ins1,.sub3ins2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     justify-content: center;
+     flex-direction: column-reverse;
+     gap: 20px;
+}
+h3{
+    transition: 0.3s;
+}
+h3:hover{
+    cursor: pointer;
+    scale: 1.1;
+}  
+
+
+/* OS */
+
+
+.os{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation: closed .5s ease;
+  }
+  @keyframes closed{
+    from{opacity: 0%;
+    }
+    to{opacity: 100%;}
+}
+
+
+.OSContents{
+    gap: 40px;
+    display: flex; 
+    flex-direction: column;
+}
+.arrow2{
+    width: 35px;
+    rotate: 180deg;
+}
+.back8, .back9{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.OSContentsMaterial{
+   display: none;
+   flex-direction: column;
+   align-items: center;
+   gap: 50px;
+    justify-content: center;
+
+}
+.OSContentsMaterial .adel{
+    width: 140px;
+    border-radius: 50%;
+    
+}
+.sub4ins1,.sub4ins2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     justify-content: center;
+     flex-direction: column-reverse;
+     gap: 20px;
+}
+h3{
+    transition: 0.3s;
+}
+h3:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+
+
+
+/* ARC */
+
+
+.arc{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation: closed .5s ease;
+  }
+  @keyframes closed{
+    from{opacity: 0%;
+    }
+    to{opacity: 100%;}
+}
+
+
+.ARCContents{
+    gap: 40px;
+    display: flex; 
+    flex-direction: column;
+}
+.arrow2{
+    width: 35px;
+    rotate: 180deg;
+}
+.back9, .back10{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.ARCContentsMaterial{
+   display: none;
+   flex-direction: column;
+   align-items: center;
+   gap: 50px;
+    justify-content: center;
+
+}
+.ARCContentsMaterial .adel{
+    width: 140px;
+    border-radius: 50%;
+    
+}
+.sub5ins1,.sub5ins2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     justify-content: center;
+     flex-direction: column-reverse;
+     gap: 20px;
+}
+h3{
+    transition: 0.3s;
+}
+h3:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.settings{
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    gap: 50px;
+    background: rgba(0, 0, 0, 0.254);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 70px;
+    backdrop-filter: blur(10px);
+    z-index: 200;
+    font-weight: 400;
+    letter-spacing: 3px;
+    border: 1px solid ;
+    border-radius: 10px;
+}
+.settings div{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+}
+h5{
+    transition: 0.2s;
+
+}
+h5:hover{
+    border: 2px solid;
+    padding: 5px;
+  cursor: pointer;
+}
+@media(max-width: 470px) {
+   
+   
+   .select{
+       font-size: 40px;
+   }
+   #intro{
+    font-size: 50px;
+    gap: 10px;
+ }
+ #intro img{
+     width: 70px;
+  }
+}
+
+@media(max-width: 426px) {
+   
+         h1{
+            font-size: 40px;
+        }
+        main p{
+            font-size: 16px;
+            width: 80%;
+        }
+        body{
+            overflow: hidden;
+        }
+        .select{
+            font-size: 40px;
+        }
+        #intro{
+            font-size: 50px;
+            gap: 10px;
+         }
+         #intro img{
+             width: 70px;
+          }
+       
+          button{
+            scale: .7;
+          }
+    
+  }
+  .set{
+    width: 30px;
+  }
+  
+@media(max-width: 364px) {
+   
+h1{
+        font-size:40px;
+    }
+    main p{
+        font-size: 15px;
+        width: 80%;
+    }
+    
+    body{
+        overflow: hidden;
+    }
+    .select{
+        font-size: 30px;
+    }
+    #intro{
+        font-size: 50px;
+        gap: 10px;
+     }
+     #intro img{
+         width: 70px;
+      }
+      button{
+        scale: .7;
+      }
+}
+ 
+@media(max-width: 377px) {
+   
+    h1{
+            font-size:40px;
+        }
+        main p{
+            font-size: 15px;
+            width: 80%;
+        }
+        
+        body{
+            overflow: hidden;
+        }
+        .select{
+            font-size: 30px;
+        }
+        h2{
+            font-size: 20px;
+        }
+        #intro{
+            font-size: 50px;
+            gap: 10px;
+         }
+         #intro img{
+             width: 70px;
+          }
+          button{
+            scale: .7;
+          }
+    }
+    @media(max-width: 296px) {
+   
+        h1{
+                font-size:40px;
+            }
+            main p{
+                font-size: 15px;
+                width: 80%;
+            }
+            
+            body{
+                overflow: hidden;
+            }
+            .select{
+                font-size: 25px;
+            }
+            h2{
+                font-size: 20px;
+            }
+            #intro{
+               font-size: 50px;
+               gap: 10px;
+            }
+            #intro img{
+                width: 70px;
+             }
+             button{
+               scale: .7;
+             }
+        }
